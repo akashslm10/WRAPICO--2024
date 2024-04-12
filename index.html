@@ -1,0 +1,615 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+  <link rel="stylesheet" href="./global.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- ---demo style--- -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--swiper-theme-color);
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: var(--swiper-theme-color);
+      fill: none;
+      stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  </style>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer ></script>
+
+    <!-- link script js file -->
+    <script src="./script.js" defer></script>
+</head>
+
+
+<body class="h-screen">
+    <header class="bg-gray-800">
+        <nav class="flex justify-between items-center w-auto mx-auto p-6 ">
+            <div>
+            <a href="./index.html"> <img class="w-16 cursor-pointer p-1 bg-white rounded-full" src="./image/ccchsh.png" alt="..." ></a>
+            
+            </div>
+            <div class="md:static  absolute  nav-links z-50  md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 bg-gray-800">
+                <ul class="flex md:flex-row flex-col  md:items-center md:gap-[4vw] gap-8" id="topnav">
+                    <li>
+                        <a class=" text-white  hover:rounded-md sm:hover:text-rose-800  text-lg" href="./index.html">Home</a>
+                    </li>
+                    <li class="">
+                    
+                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-white   border-b border-gray-100 md:border-0 pl-3 pr-4 py-2 hover:rounded-md  sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg" >About<svg class="w-4 h-4 ml-1 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                    
+                        <!-- Dropdown menu for "About" -->
+                        <div id="dropdownNavbarAbout" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
+                                <li>
+                                    <a href="./theme.html" target class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Theme</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">About Conference</a>
+                                </li>
+                                <li>
+                                    <a href="./datesImp.html" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base"> Important Dates </a>
+                                </li>
+                                <li>
+                                    <a href="./team.html" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Organising Committee</a>
+                                </li>
+                                <li>
+                                    <a href="./speakers.html" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Conference Speakers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-white  border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg hover:rounded-md" >Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Call for Paper" -->
+                        <div id="dropdownNavbarPaper" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkPaper">
+                                <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
+                                    <li>
+                                        <a href="https://rb.gy/041bd" target="_blank" class=" hover:bg-gray-100 sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Abstract Format </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://rb.gy/d23r8r" target="_blank" class=" hover:bg-gray-100 sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Abstract Submission </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://rb.gy/hrolj" target="_blank" class=" hover:bg-gray-100 sm:hover:text-rose-800 text-white block px-4 py-2 text-base" >Full Paper Format </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://rb.gy/ul1y7x" target="_blank" class=" hover:bg-gray-100 sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Full Paper Submission </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=" hover:bg-gray-100 sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Poster Format</a>
+                                    </li>
+                                <!-- <li>
+                                    <a href="#" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Paper Submission</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Mode of Presentation</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLinkRegistration" data-dropdown-toggle="dropdownNavbarRegistration" class="text-white  border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg hover:rounded-md">Registration<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <!-- Dropdown menu for "Registration" -->
+                        <div id="dropdownNavbarRegistration" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
+                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkRegistration">
+                                <li>
+                                    <a href="https://rb.gy/37e9w" target="_blank" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Offline Registration</a>
+                                </li>
+                                <li>
+                                    <a href="https://rb.gy/37e9w" target="_blank" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Online Registration</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!--Submission-->
+                    <li>
+                        <a class="text-white  sm:hover:text-rose-800 text-lg hover:rounded-md" href="./schedule.html">Program Schedule</a>
+                    </li>
+                    <li>
+                        <a class="text-white  sm:hover:text-rose-800 text-lg hover:rounded-md" href="./travel.html">Travel</a>
+                    </li>
+                    <li>
+                        <a class="text-white  sm:hover:text-rose-800 text-lg hover:rounded-md" href="./accomodation.html">Accommodation</a>
+                    </li>
+                    <li>
+                        <a class="text-white  sm:hover:text-rose-800 text-lg hover:rounded-md" href="./sponser.html">Sponsorship</a>
+                    </li>
+                </ul>
+            </div>
+            <!--ICON-->
+            <div class="flex items-center gap-6 md:hidden" onclick="onToggleMenu(this)"  name="menu">
+                <!-- <ion-icon onclick="onToggleMenu(this)"  name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon> -->
+                <a href="#" >   <img class="w-12 cursor-pointer p-1 " src="./image/more.png" alt="..."></a>
+            </div>
+            <div>
+                <a href="https://indianinstituteofarchitects.com/" >   <img class="w-16 cursor-pointer p-1" src="./image/IIA LOGO.png" alt="..."></a>
+            </div>
+            <div>
+                <a href="https://www.nitp.ac.in/" target="_blank">   <img class="w-16 cursor-pointer p-1" src="./image/circular_logo_colour - 300 ppi.png" alt="..."></a>
+            </div>
+        </nav>
+    </header>
+    
+
+
+    <!--heading of conference-->
+    <div class="bg-white px-6 text-2xl text-center font-bold py-4 text-black shadow-yellow-700 shadow-xl">
+        INTERNATIONAL CONFERENCE ON <br><br> <span class="text-4xl">CLIMATE CHANGE, CULTURAL HERITAGE & SUSTAINABLE HABITAT</span>
+    </div>
+    <!-- <div class="marquee-container" style="padding-top: 30px;">
+        <style>
+            /* Define the marquee animation */
+            @keyframes marquee {
+              0% {
+                transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+    }
+    
+    /* Apply the marquee animation to elements with the "blink" class */
+    .blink {
+    
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    }
+    
+    /* Style the container div */
+    .marquee-container {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    }
+    </style>
+    <a href="cfp.html" target="_blank" class="blink">
+        <h3 style="display: inline-block; padding-left: 7px;color: red;">Call For Paper(For 2024)</h3>
+      </a>
+      
+      &nbsp;&nbsp;&nbsp;&nbsp; <!-- Add two spaces as separators -->
+      
+      <!-- <a href="https://easychair.org/conferences/?conf=cicba2024" target="_blank" class="blink">
+        <h2 style="display: inline-block;color: black;">Submission Link</h2>
+      </a>
+      
+      &nbsp;&nbsp;  -->
+      
+      <!-- <a href="specialSession.html" class="blink">
+        <h3 style="display: inline-block; padding-left: 7px;font-weight: bolder;color: blue;">Call For Special Sessions</h3>
+      </a>
+      &nbsp;&nbsp;
+      
+      <h5 class="blink" style="color: black;">The deadline for paper submission has been extended till November 18th, 2023 &mdash; The deadline for special session proposal has been extended till November 18th, 2023</h5>
+    
+    <br>
+    </div> -->
+    
+
+    <!---date of conf -->
+    <div class="justify-center bg-white">
+        <div>
+            <div class="flex flex-col items-center space-y-8 lg:space-y-32 px-0 lg:px-0">
+                <div class="blink justify-center py-5 space-x-4" >
+                    <h1 class="font-mullish font-extrabold text-4xl text-color: rgb(125 211 252); text-center space-x-4">
+                        February  17 - 18, 2024</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--- image of nitp -->
+
+    <!-- <section class="bg-white w-full h-2/3" style="background-image: url('./image/nitp main .jpeg'); background-size: cover;opacity:1;background-repeat: no-repeat;">
+        <div class="flex flex-col items-center space-y-8 lg:space-y-32 px-4 lg:px-0">
+        </div>
+    </section> -->
+    <div class="swiper mySwiper w-full h-2/3  ">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./image/nitp main .jpeg" alt="">
+          </div>
+          <!-- <div class="swiper-slide">
+            <img src="./image/nitp9.jpeg" alt="">
+          </div> -->
+          <div class="swiper-slide">
+            <img src="./image/imag2.jpeg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/iia.jpeg" alt="">
+          </div>
+          <!-- <div class="swiper-slide">
+            <img src="./image/iia 1.jpeg" alt="">
+          </div> -->
+          <!-- <div class="swiper-slide">
+            <img src="./image/iia2.jpeg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/nitp5.jpeg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/nitp11.jpeg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/nitp10.jpeg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/nitp6.jpeg" alt="">
+          </div> -->
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span></span>
+        </div>
+      </div>
+    
+
+    <!--dates blink-->
+    <!-- <div class="justify-center bg-gray-800">
+        <div>
+            <div class="flex-col items-center space-y-8 lg:space-y-32 px-4 lg:px-0">
+                <div class="justify-center pt-5 blink">
+                    <h1 class="font-mullish font-extrabold text-4xl text-color: rgb(125 211 252); text-center">
+                        Date of Conference
+                    </h1>
+                </div>
+            </div>
+            <div class="flex flex-col items-center space-y-8 lg:space-y-32 px-0 lg:px-0">
+                <div class="blink justify-center py-5 space-x-4" >
+                    <h1 class="font-mullish font-extrabold text-4xl text-color: rgb(125 211 252); text-center space-x-4">
+                        February  17 - 18, 2024</h1>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- LOGO Section -->
+    <!-- <div class="flex justify-between items-center container mx-auto p-6">
+
+        <div class="flex items-center">
+            <a href="./index.html">
+                <img class="w-20 h-20 cursor-pointer p-1" src="./image/ccchsh.png" alt="...">
+            </a>
+        </div>
+        
+        <div class="flex items-center">
+            <a href="https://indianinstituteofarchitects.com/" target="_blank">
+                <img class="w-20 h-20 cursor-pointer p-1" src="./image/IIA LOGO.png" alt="...">
+            </a>
+        </div>
+
+        <div class="flex items-center">
+            <a href="https://www.nitp.ac.in/" target="_blank">
+                <img class="w-20 h-20 cursor-pointer p-1" src="./image/circular_logo_colour - 300 ppi.png" alt="...">
+            </a>
+        </div>
+    </div> -->
+    
+
+    <!-- table for imp dates -->
+    <div class="">
+            
+        <table class="  font-inter w-full table-auto border-separate border-spacing-y-1 overflow-scroll text-left md:overflow-auto ">
+            <caption class="text-center p-5 text-3xl font-semibold text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                IMPORATANT DATES
+            </caption>
+            <thead class="w-full rounded-lg bg-[#222E3A]/[6%] text-base font-semibold text-white">
+                <tr class="">
+                <th class="whitespace-nowrap rounded-l-lg py-3 pl-3 text-2xl font-semibold text-[#212B36] ">S. No.</th>
+                <th class="whitespace-nowrap py-3 pl-1 text-2xl font-semibold text-[#212B36] ">DATE</th>
+                <th class="whitespace-nowrap py-3 text-2xl font-semibold text-[#212B36] ">EVENT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">1.</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]">November   03, 2023</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">
+                    <a href="https://rb.gy/5zim6o" style="color:#0000ff">Call for Abstract</a>
+                        <button onclick="window.location.href ='https://rb.gy/5zim6o '" class="ml-2 px-3 py-1  text-black rounded-md" style="color:#0000ff">
+                        <img src="./image/cl1.png" alt="Logo" class="mr-2 h-10 w-10 "/> 
+                        <p class="blink text-sm font-sm">click</p></button>
+                        
+                </td>
+                </tr>
+                
+                
+                <!-- <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                    <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">1.</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">December 18, 2023</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">
+                        <a href="https://rb.gy/041bd" class="text-blue-500">Call for Abstract</a>
+                        <button onclick="window.location.href='your_link_here'" class="ml-2 px-3 py-1 bg-blue-500 text-white rounded-md">click</button>
+                    </td> -->
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">2.</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]">November       27 ,  2023 <br> <p class="blink text-sm font-bold">Deadline extended till December 11, 2023</p> </td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Abstract Submission</td>
+                </tr>
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                    <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">3.</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">December       18 ,  2023  </td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Select Abstract Notification * </td>
+                </tr>
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                    <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">4.</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">January       15 ,  2024</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Full Paper Submission</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="bg-white">
+                    <td colspan="3" class="bg-red-600 px-6 py-4 text-base text-white font-bold">
+                        <b class="blink text-sm font-bold">NOTE:- </b> <br> 1. Selected papers will be published in  chapter of Scopus indexed book. <br>
+                        2. Selected papers will be published as a chapter of Scopus indexed journal ( APC will be applicable as per journal policy). 
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!---The conference-->
+    <section class="relative py-6 md:mx-[5%] hover:shadow-md">
+        <h2 class="text-center text-3xl font-bold pl-1" style="background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+            THE CONFERENCE
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-3 mx-auto items-center space-x-4 px-4 md:px-32">
+            <div class="md:col-span-2 lg:col-span-3">
+                <p class="text-xl text-justify">
+                    Welcome to the International Conference on “Climate Change Cultural Heritage & Sustainable Habitat”  Uniting for a Sustainable Future!
+                    In a world facing unprecedented environmental challenges, we are proud to invite you to a gathering of brilliant minds and passionate individuals dedicated to addressing one of the most critical issues of our time: climate change, to understand its impact on Cultural Heritage and Habitat.
+                    Our conference aims to foster a global dialogue, bringing together climate scientists, urban planners, conservation architects, academicians, activists, researchers and policy makers from every corner of the globe. Together, we will explore innovative solutions, share groundbreaking research, and catalyze collective action to combat the urgent threats posed by climate change on cultural heritage and habitat.
+                    This conference will serve as a platform for knowledge exchange, collaboration, and inspiration for building a sustainable future. It is a call to debate and recognize our shared responsibility in safeguarding our planet's future.
+                    Join us as we embark on a transformative journey towards a more sustainable and resilient world. Together, we can turn the tide on climate change and its impact on cultural heritage and habitat for forging towards a more significant, brighter, cleaner, and equitable future for generations to come.
+                    Be part of the change. Be part of the solution. Welcome to the International Conference on Climate Change, Cultural Heritage, and Sustainable Habitat.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--about NIT-->
+    <div class="relative md:mx-[5%] hover:shadow-md">
+        <section>
+            <div class="py-6">
+                <h2 class="text-center text-2xl font-bold pl-1" style="background: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+                    National Institute Of Technology Patna <br> Patna (Bihar), India
+                </h2>
+                <div class="lg:grid lg:grid-cols-2  md:grid-cols-1  pb-3 items-center space-x-4 " id="institute">
+                    <div class="pt-3 items-center justify-center px-[25%] py-[3%]">
+                        <img class="w-64 h-64 md:w-96 md:h-96 lg:w-128 lg:h-128 xl:w-160 xl:h-160"  
+                        src="./image/NIT_P image.jpeg" alt="NIT_P Image">  </div>
+                    <div class="py-4">
+                        <p class="text-xl text-justify px-[5%]">
+                            National Institute of Technology Patna is the 18th National Institute of Technology created by the Ministry of H.R.D. Government of India after rechristening the erstwhile Bihar College of Engineering Patna on 28. 01. 2004. NIT Patna marked its humble beginning in 1886 with the establishment of the pleaders' survey training school which was subsequently promoted to Bihar College of Engineering Patna in 1924. This made this institute the 6th Oldest Engineering Institute of India. The institute is situated on the south bank of the holy river Ganges behind Gandhi Ghat, one of the most important and reverential places of Patna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <!-- Contact-->
+    <div class="relative  p-[1%] ">
+        <div class="lg:grid lg:grid-cols-2 md:flex-col bg-gray-900 h-1/3 shadow-lg hover:shadow-lg hover:shadow-cyan-200">
+            <div class="p-4 flex flex-col pb-4 shadow-sm">
+            <div class="text-left pl-4">
+                <div class="text-left flex flex-row" style="background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+                <div class="h-15">
+                    <img src="image/contact/location.png" class="h-6 w-13 pl-2 pt-2" />
+                </div>
+                <div class="pl-2">
+                    <h2 class="text-xl text-white font-semibold">Venue</h2>
+                </div>
+                </div>
+                <hr class="border-2 bg-slate-700">
+            </div>
+        
+            
+            <div class="text-left text-white"> 
+                <class class="text-left pl-4">
+                <p class="text-left py-2">
+                Bapu Sabhaghar<br/> 
+                Gyan Bhawan<br/> 
+                North of Gandhi Maidan,<br/>
+                Ashok Rajpath Road <br>
+                Patna, (Bihar) 800001
+                </p>
+            </div>
+            <div class="mb-6 md:mb-0">
+                        <a target="_blank" href=https://www.google.com/maps/place/Bapu+Sabhagar,+At+Gyan+Bhawan+Patna/@25.6203967,85.1441127,15z/data=!4m6!3m5!1s0x39ed58572f52045f:0xa38969b037c77c0e!8m2!3d25.6203967!4d85.1441127!16s%2Fg%2F11gdkwylh2?entry=ttu class="flex items-center">
+                            <img src="./image/google-maps.png" class="h-8 mr-3" alt="FlowBite Logo" /><p class="text-white hover:text-blue-500">Google Map</p>
+                        </a>
+                    
+            </div>
+
+            </div>
+        
+            <div class="p-4 flex flex-col pb-4 shadow-sm text-white">
+            <div class="text-left pl-4">
+                <div class="text-left flex flex-row" style="background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
+                <div class="justify-left">
+                    <img src="./image/contact/contact.png" class="h-6 w-13 pl-2 pt-2" />
+                </div>
+                <div class="pl-2">
+                    <h2 class="text-xl font-semibold">Contact</h2>
+                </div>
+                </div>
+                <hr class="border-2 bg-slate-700">
+            </div>
+        
+            <br/>
+            <div class="text-left pl-4"> 
+                <p class="text-left py-2">
+                Conference Secretariat<br/>
+                3chsh - 2024<br/>
+                Department of Architecture & Planning<br>
+                National Institute of Technology Patna <br/>
+                Ashok Rajpath, Patna - 800005 <br>
+                (Bihar) India
+                <br/>
+                Email: <a href="mailto:3chsh.conf@nitp.ac.in" class="underline">ccchsh.conf@nitp.ac.in</a>
+                </p>
+            </div>
+            </div>    
+        </div>
+        
+    </div>
+
+    <!--Footer-->
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+            <div class="flex flex-col space-y-2 sm:gap-6 sm:grid-cols-3">
+                <div class="mb-6 md:mb-0">
+                    <a href="./index.html" class="flex items-center">
+                        <img src="./image/ccchsh.png" class="h-8 mr-3 bg-white rounded-2xl" alt="ccchsh Logo" /><span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">3chsh-2024</span>
+                    </a>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <h1 class="text-lg font bold text-white">Contact Us :-<span href="ccchsh.conf@nitp.ac.in" class="text-blue-700 px-4"><a href="mailto:ccchsh.conf@nitp.ac.in" class="underline">ccchsh.conf@nitp.ac.in</a></span>
+                    </h1>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <!-- <a target="_blank" href=https://www.google.com/maps/place/Bapu+Sabhagar,+At+Gyan+Bhawan+Patna/@25.6203967,85.1441127,15z/data=!4m6!3m5!1s0x39ed58572f52045f:0xa38969b037c77c0e!8m2!3d25.6203967!4d85.1441127!16s%2Fg%2F11gdkwylh2?entry=ttu class="flex items-center">
+                        <img src="./image/google-maps.png" class="h-8 mr-3" alt="FlowBite Logo" /><p class="text-white">Bapu Sabhagar   Gyan Bhawan , Patna</p>
+                    </a> -->
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Home</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://rb.gy/37e9w" class="hover:underline ">The Conference
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.nitp.ac.in/" class="hover:underline">NIT Patna</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About Us</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="https://rb.gy/37e9w" class="hover:underline ">Registration</a>
+                        </li>
+                        <li>
+                            <a href="./schedule.html" class="hover:underline">Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">3chsh™</a>. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 space-x-2 sm:justify-center sm:mt-0">
+                <p class="text-gray-600 font-bold">Designed & Maintained by - </p>
+                <a href="https://www.linkedin.com/in/akash-saurav-89b4b2245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:underline font-bold ">Akash Saurav</a>
+                <p class="text-gray-600 font-bold">&</p>
+                <a href="https://www.linkedin.com/in/deepak-kumar-287917207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:underline font-bold">Deepak Kumar</a>
+
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    
+    
+    
+    <!-- script for small-sized menu -->
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+
+    <!-- script for dropdown of 'Call for Papers' -->
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+  
+</body>
+</html>
