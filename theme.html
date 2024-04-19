@@ -8,52 +8,44 @@
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
 </head>
 <body>
-    <header class="bg-gray-800">
-        <nav class="flex justify-between items-center w-[99%] mx-auto p-6 ">
+    <header class="bg-[#F9F7F0]">
+        <nav class="flex justify-between items-center w-auto mx-auto px-6 py-2 ">
             <div>
-            <a href="./index.html"> <img class="w-16 cursor-pointer p-1 bg-white rounded-full" src="./image/ccchsh.png" alt="..." ></a>
-            
+            <!-- <a href="./index.html"> <img class="w-16 cursor-pointer p-1 bg-[#F9F7FQ] rounded-full" src="./image/ccchsh.png" alt="..." ></a> -->
+            <a href="https://www.nitp.ac.in/" target="_blank">   <img class="w-16 cursor-pointer p-1" src="./image/circular_logo_colour - 300 ppi.png" alt="..."></a>
             </div>
-            <div class="md:static  absolute  nav-links z-50  md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 bg-gray-800">
+            <div class="md:static  absolute  nav-links z-50  md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 bg-[#F9F7FQ]">
                 <ul class="flex md:flex-row flex-col  md:items-center md:gap-[4vw] gap-8" id="topnav">
                     <li>
-                        <a class=" text-white 
-                         hover:rounded-md sm:hover:text-rose-800  text-lg" href="./index.html">Home</a>
+                        <a class=" text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./index.html">Home</a>
                     </li>
                     <li class="">
                     
-                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-white   border-b border-gray-100 md:border-0 pl-3 pr-4 py-2 hover:rounded-md 
-                         sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg" >About<svg class="w-4 h-4 ml-1 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] border-b border-gray-100 md:border-0 pl-3 pr-4 py-2  md:p-0  flex items-center justify-between w-full md:w-auto  rounded-lg px-2 text-lg" >About<svg class="w-4 h-4 ml-1 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
                     
                         <!-- Dropdown menu for "About" -->
                         <div id="dropdownNavbarAbout" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
                             <ul class="py-1" aria-labelledby="dropdownNavbarLinkAbout">
                                 <li>
-                                    <a href="./theme.html" target class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Theme</a>
+                                    <a href="./theme.html" target class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Theme</a>
                                 </li>
                                 <li>
-                                    <a href="./about.html" class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base">About Conference</a>
+                                    <a href="./about.html" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">About Conference</a>
                                 </li>
                                 <li>
-                                    <a href="./datesImp.html" class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base"> Important Dates </a>
+                                    <a href="./datesImp.html" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base"> Important Dates </a>
                                 </li>
                                 <li>
-                                    <a href="./team.html" class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Organising Committee</a>
+                                    <a href="./team.html" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Organising Committee</a>
                                 </li>
                                 <li>
-                                    <a href="./speakers.html" class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Conference Speakers</a>
+                                    <a href="./speakers.html" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Conference Speakers</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-white 
-                         border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg hover:rounded-md" >Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-[#178CA4] sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2  md:p-0  flex items-center justify-between w-full md:w-auto text-lg hover:rounded-md rounded-lg px-2 " >Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
                         <!-- Dropdown menu for "Call for Paper" -->
                         <div id="dropdownNavbarPaper" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
                             <ul class="py-1" aria-labelledby="dropdownNavbarLinkPaper">
@@ -74,49 +66,29 @@
                                         <a href="#" class=" hover:bg-gray-100 sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Poster Format</a>
                                     </li>
                                 <!-- <li>
-                                    <a href="#" class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Paper Submission</a>
+                                    <a href="#" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Paper Submission</a>
                                 </li>
                                 <li>
-                                    <a href="#" class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Mode of Presentation</a>
+                                    <a href="#" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Mode of Presentation</a>
                                 </li> -->
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <button id="dropdownNavbarLinkRegistration" data-dropdown-toggle="dropdownNavbarRegistration" class="text-white 
-                         border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg hover:rounded-md">Registration<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-                        <!-- Dropdown menu for "Registration" -->
-                        <div id="dropdownNavbarRegistration" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
-                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkRegistration">
-                                <li>
-                                    <a href="https://rb.gy/37e9w" target="_blank" class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Offline Registration</a>
-                                </li>
-                                <li>
-                                    <a href="https://rb.gy/37e9w" target="_blank" class=" 
-                                     sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Online Registration</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" target="_blank" href="https://forms.gle/ZMHhJ8K2471rkLDQ8">Registration</a>
                     </li>
                     <!--Submission-->
                     <li>
-                        <a class="text-white 
-                         sm:hover:text-rose-800 text-lg hover:rounded-md" href="./schedule.html">Program Schedule</a>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./schedule.html">Program Schedule</a>
                     </li>
                     <li>
-                        <a class="text-white 
-                         sm:hover:text-rose-800 text-lg hover:rounded-md" href="./travel.html">Travel</a>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./travel.html">Travel</a>
                     </li>
                     <li>
-                        <a class="text-white 
-                         sm:hover:text-rose-800 text-lg hover:rounded-md" href="./accomodation.html">Accommodation</a>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./accomodation.html">Accommodation</a>
                     </li>
                     <li>
-                        <a class="text-white 
-                         sm:hover:text-rose-800 text-lg hover:rounded-md" href="./sponser.html">Sponsorship</a>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./sponser.html">Sponsorship</a>
                     </li>
                 </ul>
             </div>
@@ -126,10 +98,10 @@
                 <a href="#" >   <img class="w-12 cursor-pointer p-1 " src="./image/more.png" alt="..."></a>
             </div>
             <div>
-                <a href="https://indianinstituteofarchitects.com/" >   <img class="w-16 cursor-pointer p-1" src="./image/IIA LOGO.png" alt="..."></a>
+                <!-- <a href="https://indianinstituteofarchitects.com/" >   <img class="w-16 cursor-pointer p-1" src="./image/IIA LOGO.png" alt="..."></a> -->
             </div>
             <div>
-                <a href="https://www.nitp.ac.in/" target="_blank">   <img class="w-16 cursor-pointer p-1" src="./image/circular_logo_colour - 300 ppi.png" alt="..."></a>
+                
             </div>
         </nav>
     </header>
@@ -142,12 +114,10 @@
     <!-- SECTION -->
     <div class="flex flex-col-3 items-center justify-center space-x-9 py-4 md:py-8 flex-wrap">
         <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg" src="./image/theme/Cultural Heritage_Themes-1.jpg" alt="" />
-            </a>
+            
             <div class="p-5">
                 <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Themes on Cultural Heritage</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Urban water management in water stressed regions</h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
                 <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -158,16 +128,14 @@
                 </a>
             </div>
         </div>
-        <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
-            <a href="#">
-                <img class="rounded-t-lg" src="./image/theme/Cultural Heritage_Themes-2.jpg" alt="" />
-            </a>
+        <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
             <div class="p-5">
                 <a href="#">
-                    <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Themes on Sustainable Habitat</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fluvial Hydraulics in rivers of Asia-Pacific Region</h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
-                <a href="https://docs.google.com/spreadsheets/d/11VU6p3qzUb6latRZqXwCR3VH6kgSUlb_/edit#gid=1343076164" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Download
                     <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -176,15 +144,69 @@
             </div>
         </div>
         <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="rounded-t-lg" src="./image/theme/Cultural Heritage_Themes-3.jpg" alt="" />
-            </a>
+            
             <div class="p-5">
                 <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Themes on Climate Change</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Watershed management of Rivers</h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
-                <a href="https://docs.google.com/spreadsheets/d/1HVr0Exmf0B2TAQiMGD3fPkFhCKJJ9Tn_/edit#gid=2013239592" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Download
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div><div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Irrigation water management for different cropping scenarios</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Download
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div><div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Recent Climate changes models and their application in Asia-Pacific regions</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Download
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div><div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Application of Artificial Intelligence and Machine learning Techniques in Hydrology and water resource management</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Download
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div><div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Innovative techniques and product development for water quality/flow monitoring and measurement</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Download
                     <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -192,7 +214,51 @@
                 </a>
             </div>
         </div>
-        
+        <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Recent techniques for Hydrological modelling</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Download
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Wetland for water resources management</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Download
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Water quality monitoring, modelling and pollution remediation techniques</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+                <a href="https://docs.google.com/document/d/1k7XwfcmzC2OfmoQ01AfLmo9tj1L9QHj-/edit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Download
+                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
 
 
