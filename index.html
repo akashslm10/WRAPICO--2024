@@ -85,21 +85,21 @@
 </head>
 
 
-<body class="h-screen">
-    <header class="bg-gray-800">
-        <nav class="flex justify-between items-center w-auto mx-auto p-6 ">
+<body class="h-screen bg-[#F9F7F0]">
+    <header class="bg-[#F9F7F0]">
+        <nav class="flex justify-between items-center w-auto mx-auto px-6 py-2 ">
             <div>
-            <a href="./index.html"> <img class="w-16 cursor-pointer p-1 bg-white rounded-full" src="./image/ccchsh.png" alt="..." ></a>
-            
+            <!-- <a href="./index.html"> <img class="w-16 cursor-pointer p-1 bg-[#F9F7FQ] rounded-full" src="./image/ccchsh.png" alt="..." ></a> -->
+            <a href="https://www.nitp.ac.in/" target="_blank">   <img class="w-16 cursor-pointer p-1" src="./image/circular_logo_colour - 300 ppi.png" alt="..."></a>
             </div>
-            <div class="md:static  absolute  nav-links z-50  md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 bg-gray-800">
+            <div class="md:static  absolute  nav-links z-50  md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 bg-[#F9F7FQ]">
                 <ul class="flex md:flex-row flex-col  md:items-center md:gap-[4vw] gap-8" id="topnav">
                     <li>
-                        <a class=" text-white  hover:rounded-md sm:hover:text-rose-800  text-lg" href="./index.html">Home</a>
+                        <a class=" text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./index.html">Home</a>
                     </li>
                     <li class="">
                     
-                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-white   border-b border-gray-100 md:border-0 pl-3 pr-4 py-2 hover:rounded-md  sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg" >About<svg class="w-4 h-4 ml-1 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <button id="dropdownNavbarLinkAbout" data-dropdown-toggle="dropdownNavbarAbout" class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] border-b border-gray-100 md:border-0 pl-3 pr-4 py-2  md:p-0  flex items-center justify-between w-full md:w-auto  rounded-lg px-2 text-lg" >About<svg class="w-4 h-4 ml-1 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
                     
                         <!-- Dropdown menu for "About" -->
                         <div id="dropdownNavbarAbout" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
@@ -123,7 +123,7 @@
                         </div>
                     </li>
                     <li>
-                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-white  border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg hover:rounded-md" >Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                        <button id="dropdownNavbarLinkPaper" data-dropdown-toggle="dropdownNavbarPaper" class="text-[#178CA4] sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2  md:p-0  flex items-center justify-between w-full md:w-auto text-lg hover:rounded-md rounded-lg px-2 " >Call for Paper<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
                         <!-- Dropdown menu for "Call for Paper" -->
                         <div id="dropdownNavbarPaper" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
                             <ul class="py-1" aria-labelledby="dropdownNavbarLinkPaper">
@@ -153,31 +153,20 @@
                         </div>
                     </li>
                     <li>
-                        <button id="dropdownNavbarLinkRegistration" data-dropdown-toggle="dropdownNavbarRegistration" class="text-white  border-b border-gray-100 md:hover-bg-transparent md:border-0 pl-3 pr-4 py-2 sm:hover:text-rose-800 md:p-0  flex items-center justify-between w-full md:w-auto text-lg hover:rounded-md">Registration<svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-                        <!-- Dropdown menu for "Registration" -->
-                        <div id="dropdownNavbarRegistration" class="hidden bg-gray-800 text-base z-10 list-none divide-y divide-gray-100 rounded shadow shadow-cyan-900 my-4 w-44">
-                            <ul class="py-1" aria-labelledby="dropdownNavbarLinkRegistration">
-                                <li>
-                                    <a href="https://rb.gy/37e9w" target="_blank" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Offline Registration</a>
-                                </li>
-                                <li>
-                                    <a href="https://rb.gy/37e9w" target="_blank" class="  sm:hover:text-rose-800 text-white block px-4 py-2 text-base">Online Registration</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" target="_blank" href="https://forms.gle/ZMHhJ8K2471rkLDQ8">Registration</a>
                     </li>
                     <!--Submission-->
                     <li>
-                        <a class="text-white  sm:hover:text-rose-800 text-lg hover:rounded-md" href="./schedule.html">Program Schedule</a>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./schedule.html">Program Schedule</a>
                     </li>
                     <li>
-                        <a class="text-white  sm:hover:text-rose-800 text-lg hover:rounded-md" href="./travel.html">Travel</a>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./travel.html">Travel</a>
                     </li>
                     <li>
-                        <a class="text-white  sm:hover:text-rose-800 text-lg hover:rounded-md" href="./accomodation.html">Accommodation</a>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./accomodation.html">Accommodation</a>
                     </li>
                     <li>
-                        <a class="text-white  sm:hover:text-rose-800 text-lg hover:rounded-md" href="./sponser.html">Sponsorship</a>
+                        <a class="text-[#178CA4] hover:rounded-md sm:hover:text-white sm:hover:bg-[#178CA4] bg-[#F9F7F0] rounded-lg px-2 text-lg" href="./sponser.html">Sponsorship</a>
                     </li>
                 </ul>
             </div>
@@ -187,21 +176,22 @@
                 <a href="#" >   <img class="w-12 cursor-pointer p-1 " src="./image/more.png" alt="..."></a>
             </div>
             <div>
-                <a href="https://indianinstituteofarchitects.com/" >   <img class="w-16 cursor-pointer p-1" src="./image/IIA LOGO.png" alt="..."></a>
+                <!-- <a href="https://indianinstituteofarchitects.com/" >   <img class="w-16 cursor-pointer p-1" src="./image/IIA LOGO.png" alt="..."></a> -->
             </div>
             <div>
-                <a href="https://www.nitp.ac.in/" target="_blank">   <img class="w-16 cursor-pointer p-1" src="./image/circular_logo_colour - 300 ppi.png" alt="..."></a>
+                
             </div>
         </nav>
     </header>
     
 
-
     <!--heading of conference-->
-    <div class="bg-white px-6 text-2xl text-center font-bold py-4 text-black shadow-yellow-700 shadow-xl">
-        INTERNATIONAL CONFERENCE ON <br><br> <span class="text-4xl">CLIMATE CHANGE, CULTURAL HERITAGE & SUSTAINABLE HABITAT</span>
+    <div class="bg-[#178CA4] px-6 text-2xl text-center font-bold py-4 text-black shadow-yellow-700 shadow-xl">
+        <br><span class="text-4xl">WRAPICO -2024</span>
+        <br><span class="text-3xl">First Water Resources Asia-Pacific International Conference</span>
     </div>
-    <!-- <div class="marquee-container" style="padding-top: 30px;">
+   <div>
+     <!-- <div class="marquee-container" style="padding-top: 30px;">
         <style>
             /* Define the marquee animation */
             @keyframes marquee {
@@ -231,7 +221,7 @@
         <h3 style="display: inline-block; padding-left: 7px;color: red;">Call For Paper(For 2024)</h3>
       </a>
       
-      &nbsp;&nbsp;&nbsp;&nbsp; <!-- Add two spaces as separators -->
+      &nbsp;&nbsp;&nbsp;&nbsp;  Add two spaces as separators -->
       
       <!-- <a href="https://easychair.org/conferences/?conf=cicba2024" target="_blank" class="blink">
         <h2 style="display: inline-block;color: black;">Submission Link</h2>
@@ -248,15 +238,18 @@
     
     <br>
     </div> -->
+   </div>
     
 
     <!---date of conf -->
-    <div class="justify-center bg-white">
+    <div class="justify-center bg-[#178CA4]"> 
         <div>
             <div class="flex flex-col items-center space-y-8 lg:space-y-32 px-0 lg:px-0">
                 <div class="blink justify-center py-5 space-x-4" >
                     <h1 class="font-mullish font-extrabold text-4xl text-color: rgb(125 211 252); text-center space-x-4">
-                        February  17 - 18, 2024</h1>
+                        December 13-15, 2024
+                    </h1>
+                    <span class="text-3xl">Centenary Year Celebration</span>
                 </div>
             </div>
         </div>
@@ -273,33 +266,6 @@
           <div class="swiper-slide">
             <img src="./image/nitp main .jpeg" alt="">
           </div>
-          <!-- <div class="swiper-slide">
-            <img src="./image/nitp9.jpeg" alt="">
-          </div> -->
-          <div class="swiper-slide">
-            <img src="./image/imag2.jpeg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/iia.jpeg" alt="">
-          </div>
-          <!-- <div class="swiper-slide">
-            <img src="./image/iia 1.jpeg" alt="">
-          </div> -->
-          <!-- <div class="swiper-slide">
-            <img src="./image/iia2.jpeg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/nitp5.jpeg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/nitp11.jpeg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/nitp10.jpeg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/nitp6.jpeg" alt="">
-          </div> -->
         </div>
         <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
@@ -331,53 +297,28 @@
             </div>
         </div>
     </div> -->
-
-    <!-- LOGO Section -->
-    <!-- <div class="flex justify-between items-center container mx-auto p-6">
-
-        <div class="flex items-center">
-            <a href="./index.html">
-                <img class="w-20 h-20 cursor-pointer p-1" src="./image/ccchsh.png" alt="...">
-            </a>
-        </div>
-        
-        <div class="flex items-center">
-            <a href="https://indianinstituteofarchitects.com/" target="_blank">
-                <img class="w-20 h-20 cursor-pointer p-1" src="./image/IIA LOGO.png" alt="...">
-            </a>
-        </div>
-
-        <div class="flex items-center">
-            <a href="https://www.nitp.ac.in/" target="_blank">
-                <img class="w-20 h-20 cursor-pointer p-1" src="./image/circular_logo_colour - 300 ppi.png" alt="...">
-            </a>
-        </div>
-    </div> -->
     
 
     <!-- table for imp dates -->
     <div class="">
             
-        <table class="  font-inter w-full table-auto border-separate border-spacing-y-1 overflow-scroll text-left md:overflow-auto ">
-            <caption class="text-center p-5 text-3xl font-semibold text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+        <table class="font-inter w-full table-auto border-separate border-spacing-y-1 overflow-scroll text-left md:overflow-auto ">
+            <caption class="text-center p-5 text-3xl font-semibold text-gray-900 bg-[#178CA4] dark:text-white">
                 IMPORATANT DATES
             </caption>
-            <thead class="w-full rounded-lg bg-[#222E3A]/[6%] text-base font-semibold text-white">
+            <thead class="w-full rounded-lg bg-[#178CA4] text-base font-semibold text-white">
                 <tr class="">
-                <th class="whitespace-nowrap rounded-l-lg py-3 pl-3 text-2xl font-semibold text-[#212B36] ">S. No.</th>
-                <th class="whitespace-nowrap py-3 pl-1 text-2xl font-semibold text-[#212B36] ">DATE</th>
-                <th class="whitespace-nowrap py-3 text-2xl font-semibold text-[#212B36] ">EVENT</th>
+                <th class="whitespace-nowrap rounded-l-lg py-2 pl-3 text-2xl font-semibold text-[#212B36] ">S. No.</th>
+                <th class="whitespace-nowrap py-2 pl-1 text-2xl font-semibold text-[#212B36] ">DATE</th>
+                <th class="whitespace-nowrap py-2 text-2xl font-semibold text-[#212B36] ">EVENT</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
                 <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">1.</td>
-                <td class="px-1 py-4 text-xl font-medium text-[#637381]">November   03, 2023</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]">31st July, 2024</td>
                 <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">
-                    <a href="https://rb.gy/5zim6o" style="color:#0000ff">Call for Abstract</a>
-                        <button onclick="window.location.href ='https://rb.gy/5zim6o '" class="ml-2 px-3 py-1  text-black rounded-md" style="color:#0000ff">
-                        <img src="./image/cl1.png" alt="Logo" class="mr-2 h-10 w-10 "/> 
-                        <p class="blink text-sm font-sm">click</p></button>
+                    <a href="https://rb.gy/5zim6o" style="color:#0000ff">Submission of Extended Abstract:</a>
                         
                 </td>
                 </tr>
@@ -392,25 +333,30 @@
                     </td> -->
                 <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
                 <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">2.</td>
-                <td class="px-1 py-4 text-xl font-medium text-[#637381]">November       27 ,  2023 <br> <p class="blink text-sm font-bold">Deadline extended till December 11, 2023</p> </td>
-                <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Abstract Submission</td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]">31st August, 2024<br></td>
+                <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Acceptance of Abstract: Poster/Oral</td>
                 </tr>
                 <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
                     <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">3.</td>
-                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">December       18 ,  2023  </td>
-                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Select Abstract Notification * </td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">30th September, 2024</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Submission of full-length Paper</td>
                 </tr>
                 <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
                     <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">4.</td>
-                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">January       15 ,  2024</td>
-                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Full Paper Submission</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]">31st October, 2024</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Final Decision on Paper</td>
+                </tr>
+                <tr class="cursor-pointer bg-[#f6f8fa] drop-shadow-[0_0_10px_rgba(34,46,58,0.02)] hover:shadow-2xl">
+                    <td class="rounded-l-lg py-4 pl-3 text-xl font-medium text-[#637381]">5.</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]"> 13th -15th Dec. 2024</td>
+                    <td class="px-1 py-4 text-xl font-medium text-[#637381]" style="color:#0000ff">Date of Conference</td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr class="bg-white">
-                    <td colspan="3" class="bg-red-600 px-6 py-4 text-base text-white font-bold">
-                        <b class="blink text-sm font-bold">NOTE:- </b> <br> 1. Selected papers will be published in  chapter of Scopus indexed book. <br>
-                        2. Selected papers will be published as a chapter of Scopus indexed journal ( APC will be applicable as per journal policy). 
+                    <td colspan="3" class="bg-[#178CA4] px-6 py-1 text-base text-white font-bold">
+                        <b class="blink text-sm font-bold">NOTE:- </b> <br> A field trip to Nalanda, Rajgir, Gaya and Bodhgaya is proposed on 12th / 16th Dec. 2024 on reasonable cost. <br>
+
                     </td>
                 </tr>
             </tfoot>
@@ -425,12 +371,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-3 mx-auto items-center space-x-4 px-4 md:px-32">
             <div class="md:col-span-2 lg:col-span-3">
                 <p class="text-xl text-justify">
-                    Welcome to the International Conference on “Climate Change Cultural Heritage & Sustainable Habitat”  Uniting for a Sustainable Future!
-                    In a world facing unprecedented environmental challenges, we are proud to invite you to a gathering of brilliant minds and passionate individuals dedicated to addressing one of the most critical issues of our time: climate change, to understand its impact on Cultural Heritage and Habitat.
-                    Our conference aims to foster a global dialogue, bringing together climate scientists, urban planners, conservation architects, academicians, activists, researchers and policy makers from every corner of the globe. Together, we will explore innovative solutions, share groundbreaking research, and catalyze collective action to combat the urgent threats posed by climate change on cultural heritage and habitat.
-                    This conference will serve as a platform for knowledge exchange, collaboration, and inspiration for building a sustainable future. It is a call to debate and recognize our shared responsibility in safeguarding our planet's future.
-                    Join us as we embark on a transformative journey towards a more sustainable and resilient world. Together, we can turn the tide on climate change and its impact on cultural heritage and habitat for forging towards a more significant, brighter, cleaner, and equitable future for generations to come.
-                    Be part of the change. Be part of the solution. Welcome to the International Conference on Climate Change, Cultural Heritage, and Sustainable Habitat.
+                    The Department of Civil Engineering is the oldest and vibrant department of the institute, which was established along with the inception of the Institute in the year 1924. The Institute was formerly known as the Bihar College of Engineering Patna, a constituent engineering college under Patna University, until 27thJan 2004. It was rechristened to National Institute of Technology Patna on 28th Jan 2004 as an Autonomous Institute under MHRD, Govt. of India. The Department of Civil Engineering is committed to provide quality teaching and research opportunities to its undergraduate, postgraduate and doctoral students. The Department is actively involved in international and national research projects, and high valued consultancy works for the Government, Private Sector and Industries.     
                 </p>
             </div>
         </div>
@@ -449,7 +390,7 @@
                         src="./image/NIT_P image.jpeg" alt="NIT_P Image">  </div>
                     <div class="py-4">
                         <p class="text-xl text-justify px-[5%]">
-                            National Institute of Technology Patna is the 18th National Institute of Technology created by the Ministry of H.R.D. Government of India after rechristening the erstwhile Bihar College of Engineering Patna on 28. 01. 2004. NIT Patna marked its humble beginning in 1886 with the establishment of the pleaders' survey training school which was subsequently promoted to Bihar College of Engineering Patna in 1924. This made this institute the 6th Oldest Engineering Institute of India. The institute is situated on the south bank of the holy river Ganges behind Gandhi Ghat, one of the most important and reverential places of Patna.
+                            National Institute of Technology Patna was formerly known as the Bihar College of Engineering Patna, a constituent engineering College under Patna University, until 27th Jan 2004. It was rechristened NIT Patna on 28th Jan 2004 as an Autonomous Institute under the Ministry of Education, Govt. of India. The Institute imparts high-level education, training, research, and development in Science, Engineering, Architecture & Planning, Humanities & Social Sciences and Technology along with high-quality education and values at UG, PG, and Ph.D. levels. National Institute of Technology Patna has an overall NIRF ranking of 56.
                         </p>
                     </div>
                 </div>
@@ -459,7 +400,7 @@
     </div>
     <!-- Contact-->
     <div class="relative  p-[1%] ">
-        <div class="lg:grid lg:grid-cols-2 md:flex-col bg-gray-900 h-1/3 shadow-lg hover:shadow-lg hover:shadow-cyan-200">
+        <div class="lg:grid lg:grid-cols-2 md:flex-col  h-1/3 shadow-lg bg-[#178CA4] hover:shadow-lg hover:shadow-cyan-200">
             <div class="p-4 flex flex-col pb-4 shadow-sm">
             <div class="text-left pl-4">
                 <div class="text-left flex flex-row" style="background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
@@ -496,12 +437,12 @@
             <div class="p-4 flex flex-col pb-4 shadow-sm text-white">
             <div class="text-left pl-4">
                 <div class="text-left flex flex-row" style="background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px); background-size: 10px 100%; height: auto; background-repeat: repeat;">
-                <div class="justify-left">
-                    <img src="./image/contact/contact.png" class="h-6 w-13 pl-2 pt-2" />
-                </div>
-                <div class="pl-2">
-                    <h2 class="text-xl font-semibold">Contact</h2>
-                </div>
+                    <div class="justify-left">
+                        <img src="./image/contact/contact.png" class="h-6 w-13 pl-2 pt-2" />
+                    </div>
+                    <div class="pl-2">
+                        <h2 class="text-xl font-semibold">Contact</h2>
+                    </div>
                 </div>
                 <hr class="border-2 bg-slate-700">
             </div>
@@ -525,17 +466,17 @@
     </div>
 
     <!--Footer-->
-    <footer class="bg-white dark:bg-gray-900">
+    <footer class="bg-[#178CA4]">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
             <div class="flex flex-col space-y-2 sm:gap-6 sm:grid-cols-3">
                 <div class="mb-6 md:mb-0">
                     <a href="./index.html" class="flex items-center">
-                        <img src="./image/ccchsh.png" class="h-8 mr-3 bg-white rounded-2xl" alt="ccchsh Logo" /><span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">3chsh-2024</span>
+                        <img src="./image/ccchsh.png" class="h-8 mr-3 bg-white rounded-2xl" alt="ccchsh Logo" /><span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WRAPICO-2024</span>
                     </a>
                 </div>
                 <div class="mb-6 md:mb-0">
-                    <h1 class="text-lg font bold text-white">Contact Us :-<span href="ccchsh.conf@nitp.ac.in" class="text-blue-700 px-4"><a href="mailto:ccchsh.conf@nitp.ac.in" class="underline">ccchsh.conf@nitp.ac.in</a></span>
+                    <h1 class="text-lg font bold text-white">Contact Us :-<span href="www.nitp.ac.in" class="text-blue-700 px-4"><a href="mailto:ccchsh.conf@nitp.ac.in" class="underline">wrapico2024@gmail.com</a></span>
                     </h1>
                 </div>
                 <div class="mb-6 md:mb-0">
@@ -583,7 +524,7 @@
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">3chsh™</a>. All Rights Reserved.
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">WRAPICO™</a>. All Rights Reserved.
             </span>
             <div class="flex mt-4 space-x-2 sm:justify-center sm:mt-0">
                 <p class="text-gray-600 font-bold">Designed & Maintained by - </p>
@@ -596,7 +537,6 @@
         </div>
     </footer>
 
-    
     
     
     <!-- script for small-sized menu -->
@@ -613,3 +553,11 @@
   
 </body>
 </html>
+
+
+<!-- COLORS
+    bg-[#F9F7F0]
+    bg-[#072A40]
+    bg-[#178CA4]
+    bg-[#18B7BE]
+ -->
